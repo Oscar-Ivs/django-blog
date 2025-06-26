@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['blog-08-04d7523d1d5f.herokuapp.com']
 
-]
 
 
 # Application definition
