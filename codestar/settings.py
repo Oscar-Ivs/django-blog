@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#    'default': {
+#       'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("postgresql://neondb_owner:npg_cbkgQzLh9mX3@ep-flat-dream-a2ly1m2f.eu-central-1.aws.neon.tech/cod_bony_enter_520594"))
