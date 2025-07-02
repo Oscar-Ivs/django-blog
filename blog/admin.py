@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Post, PostComment
+from .models import Post, Comment
 
-class PostCommentAdmin(admin.ModelAdmin):
-    list_display = ('sno', 'user', 'post', 'created_at', 'parent_comment')
-    search_fields = ('comment', 'user__username', 'post__title')
-    list_filter = ('created_at',)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('id', 'post', 'author', 'approved', 'created_on')
+    search_fields = ('body', 'author__username', 'post__title')
+    list_filter = ('approved', 'created_on')
 
 admin.site.register(Post)
-admin.site.register(PostComment, PostCommentAdmin)
+admin.site.register(Comment, CommentAdmin)
