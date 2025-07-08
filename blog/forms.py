@@ -1,18 +1,8 @@
-from django.shortcuts import render
-from .models import About
-from .forms import CollaborateForm
-from .models import CollaborateRequest
+from .models import Comment
+from django import forms
 
 
-def about_me(request):
-    about = About.objects.all().order_by('-updated_on').first()
-    collaborate_form = CollaborateForm()
-
-    return render(
-        request,
-        "about/about.html",
-        {
-            "about": about,
-            "collaborate_form": collaborate_form
-        },
-    )
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('body',)
