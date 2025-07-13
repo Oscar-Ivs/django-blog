@@ -4,5 +4,5 @@ os.environ.setdefault(
 )
 import os
 os.environ.setdefault(
-    "CLOUDINARY_URL", "cloudinary://353585423877585:your_actual_api_secret@dcyyzcqtj"
+    "CLOUDINARY_URL", "cloudinary://353585423877585:yjVwvIZX37DxCK7-kUOIW0-T5Gc@dcyyzcqtj"
 )
